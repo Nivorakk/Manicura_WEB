@@ -3,10 +3,16 @@
 Web de un **salón de uñas y manicura de lujo** (ficticio) situado en el Barrio de Salamanca, Madrid.
 Proyecto académico: el negocio, el nombre, el equipo, las opiniones y los precios son inventados.
 
+### ✦ [Ver la web en directo](https://nivorakk.github.io/Manicura_WEB/)
+
+[![Portada de la web de Lúmina Nails](img/preview.jpg)](https://nivorakk.github.io/Manicura_WEB/)
+
 ## Cómo verla
 
-No hace falta instalar nada: **abre `index.html` con doble clic** en cualquier navegador moderno
-(Chrome, Edge, Firefox o Safari). Funciona sin conexión a internet porque fotos y tipografías están dentro del proyecto.
+- **En internet:** [nivorakk.github.io/Manicura_WEB](https://nivorakk.github.io/Manicura_WEB/) (publicada con GitHub Pages).
+- **En tu ordenador:** descarga el proyecto (**Code → Download ZIP**) y **abre `index.html` con doble clic** en
+  cualquier navegador moderno (Chrome, Edge, Firefox o Safari). No hace falta instalar nada y funciona sin
+  conexión a internet, porque las fotos y las tipografías están dentro del proyecto.
 
 ## Secciones
 
