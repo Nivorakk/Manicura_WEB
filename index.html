@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lúmina Nails · Atelier de uñas y manicura de lujo en Madrid</title>
+  <meta name="description" content="Lúmina Nails: atelier de uñas y manicura de lujo en el Barrio de Salamanca. Manicura rusa, BIAB, gel, acrílico, nail art, probador virtual de esmaltes y reserva online.">
+  <meta name="theme-color" content="#0E0C0B">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E0C0B'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' text-anchor='middle' fill='%23D9B98C'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ================= ICONOS (sprite SVG) ================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#F3E2C3"/><stop offset=".5" stop-color="#D9B98C"/><stop offset="1" stop-color="#A8814F"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12m0-6.5V4a1.5 1.5 0 0 1 3 0v8m0-6.5a1.5 1.5 0 0 1 3 0V13m0-5a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-1a7 7 0 0 1-5.6-2.8L3.6 15a1.6 1.6 0 0 1 2.4-2.1L8 15"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+    <symbol id="i-nail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M8 21V10c0-4 1.8-7 4-7s4 3 4 7v11"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M8 15c1.2-1 6.8-1 8 0M10.5 6.5c-.4 1-.5 2.2-.5 3.5"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="m14 4 6 6-8.5 8.5a3 3 0 0 1-2.1.9H5v-4.4a3 3 0 0 1 .9-2.1Z"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="m11 7 6 6M3 21h4"/></symbol>
+    <symbol id="i-foot" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M7 21c-2 0-3-1.6-3-3.5C4 13 9 12 9 8c0-2 1.4-3 3-3 2.5 0 3 3 2.5 6-.6 3.7-2 6.3-2.6 8C11.3 20.4 9.5 21 7 21Z"/><circle cx="15.5" cy="3.5" r="1" fill="currentColor"/><circle cx="18" cy="5" r="1" fill="currentColor"/><circle cx="19.5" cy="7.8" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M5 19C5 10 10 4 20 4c0 10-6 15-15 15Z"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M5 19 13 11"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5c.5 5.6 4.9 10 10.5 10.5-5.6.5-10 4.9-10.5 10.5C11.5 16.9 7.1 12.5 1.5 12 7.1 11.5 11.5 7.1 12 1.5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="m16 16 4 4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 3 5 6v5c0 4.6 3 8.4 7 10 4-1.6 7-5.4 7-10V6Z"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.6 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M12 21s-6.5-6-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15 12 21 12 21Z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M6.5 3.5h3l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" d="M14 3.5v11.2a3.8 3.8 0 1 1-3.8-3.8M14 3.5c.3 2.6 2.2 4.6 5 4.8"/></symbol>
+    <symbol id="i-pinterest" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="m11 9-2.5 11.5M10 14.5c3.8 1.5 6.5-1 6-4s-4-3.5-6-2"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 7h3.5c4.5 0 6.5 10 11 10H21m0 0-2.5-2.5M21 17l-2.5 2.5M3 17h3.5c1.6 0 2.8-1.2 3.9-2.8M21 7h-3.5c-1.6 0-2.8 1.2-3.9 2.8M21 7l-2.5-2.5M21 7l-2.5 2.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="m16 16 4 4M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+  </svg>
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-logo">Lúmina</span>
+      <span class="preloader-sub">Nail Atelier · Madrid</span>
+      <span class="preloader-bar"><i id="preloaderBar"></i></span>
+      <span class="preloader-count" id="preloaderCount">0</span>
+    </div>
+    <div class="preloader-curtain"></div>
+  </div>
+
+  <!-- Cursor personalizado + estela de destellos -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span id="cursorLabel"></span></div>
+  <canvas class="sparkle-canvas" id="sparkleCanvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ================= CABECERA ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#inicio" class="logo" aria-label="Lúmina Nails, ir al inicio">
+        <span class="logo-mark">L</span>
+        <span class="logo-text">Lúmina<small>Nail Atelier</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" class="nav-link" data-nav="inicio">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link" data-nav="servicios">Servicios</a></li>
+          <li><a href="#precios" class="nav-link" data-nav="precios">Precios</a></li>
+          <li><a href="#nosotros" class="nav-link" data-nav="nosotros">Quiénes somos</a></li>
+          <li><a href="#galeria" class="nav-link" data-nav="galeria">Galería</a></li>
+          <li><a href="#estudio" class="nav-link" data-nav="estudio">El estudio</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#probador" class="header-icon-link" title="Probador virtual">Probador</a>
+        <a href="#reservas" class="btn btn-gold btn-sm magnetic"><span>Reservar</span></a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil a pantalla completa -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Menú móvil">
+      <ol>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#nosotros">Quiénes somos</a></li>
+        <li><a href="#galeria">Galería de trabajos</a></li>
+        <li><a href="#estudio">El estudio</a></li>
+        <li><a href="#probador">Probador virtual</a></li>
+        <li><a href="#quiz">Test de estilo</a></li>
+        <li><a href="#reservas">Reservar cita</a></li>
+      </ol>
+    </nav>
+    <p class="mobile-menu-foot">Calle de Lagasca 48 · Madrid<br>Lun–Vie 10:00–21:00 · Sáb 10:00–15:00</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= 00 · INICIO ================= -->
+    <section id="inicio" class="hero" data-section>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-in" style="--d:.1s"><svg class="i"><use href="#i-star"/></svg> Nail atelier · Barrio de Salamanca, Madrid</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="hero-in" style="--d:.2s">El arte</span></span>
+            <span class="line"><span class="hero-in" style="--d:.32s">vive en</span></span>
+            <span class="line"><span class="hero-in" style="--d:.44s"><em class="gold-text shimmer">tus manos</em></span></span>
+          </h1>
+          <p class="hero-lead hero-in" style="--d:.6s">Más de 120 técnicas, artistas premiadas y un estudio de 420&nbsp;m² pensado para que cada cita sea una experiencia. Bienvenida a Lúmina.</p>
+          <div class="hero-ctas hero-in" style="--d:.72s">
+            <a class="btn btn-gold magnetic" href="#reservas"><span>Reservar cita</span><svg class="i"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost magnetic" href="#probador"><span>Probar colores</span><svg class="i"><use href="#i-star"/></svg></a>
+          </div>
+          <ul class="hero-stats hero-in" style="--d:.86s">
+            <li><strong><span data-count="12">0</span></strong><span>años creando</span></li>
+            <li><strong>+<span data-count="18000" data-format="miles">0</span></strong><span>clientas felices</span></li>
+            <li><strong><span data-count="4.9" data-decimals="1">0</span>★</strong><span>valoración media</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="arch" data-depth="0.25">
+            <img src="img/trabajos/cromado-champagne.jpg" alt="Mano con uñas almendra largas en cromado champán sobre terciopelo negro" width="1080" height="1440" fetchpriority="high">
+            <span class="arch-shine" aria-hidden="true"></span>
+          </div>
+          <figure class="float-card fc-1" data-depth="0.7">
+            <img src="img/trabajos/mini/cat-eye-esmeralda.jpg" alt="Uñas ojo de gato verde esmeralda" width="540" height="720">
+            <figcaption>Cat eye esmeralda</figcaption>
+          </figure>
+          <figure class="float-card fc-2" data-depth="1.1">
+            <img src="img/trabajos/mini/glazed-donut.jpg" alt="Uñas cortas glazed donut perladas" width="540" height="720">
+            <figcaption>Glazed donut</figcaption>
+          </figure>
+          <div class="badge-rotate" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text><textPath href="#circlePath">LÚMINA ✦ NAIL ATELIER ✦ DESDE 2014 ✦ MADRID ✦</textPath></text>
+            </svg>
+            <svg class="badge-star i"><use href="#i-star"/></svg>
+          </div>
+          <span class="twinkle t1" aria-hidden="true"></span><span class="twinkle t2" aria-hidden="true"></span><span class="twinkle t3" aria-hidden="true"></span>
+        </div>
+      </div>
+      <a href="#servicios" class="scroll-hint" aria-label="Bajar a servicios"><span>Descubre</span><i></i></a>
+    </section>
+
+    <!-- Cinta de técnicas en movimiento -->
+    <div class="marquee" aria-label="Algunas de nuestras técnicas">
+      <div class="marquee-row"><div class="marquee-track" id="marquee1"></div></div>
+      <div class="marquee-row reverse"><div class="marquee-track" id="marquee2"></div></div>
+    </div>
+
+    <!-- ================= 01 · SERVICIOS ================= -->
+    <section id="servicios" class="section" data-section>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">01 — Servicios</p>
+          <h2 class="section-title reveal-title">Un universo de técnicas, <em class="gold-text">un solo atelier</em></h2>
+          <p class="section-lead reveal">De la manicura rusa más precisa al nail art escultórico en 3D. Si se puede hacer en una uña, en Lúmina lo hacemos, y lo hacemos con mimo.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="Categorías de servicios" id="servTabs"></div>
+        <div class="serv-panel" id="servPanel" role="tabpanel" aria-live="polite"></div>
+      </div>
+
+      <!-- Explorador de formas -->
+      <div class="container shapes" id="formas">
+        <div class="shapes-copy">
+          <p class="eyebrow reveal">Explorador de formas</p>
+          <h3 class="sub-title reveal-title">¿Qué forma <em class="gold-text">te favorece?</em></h3>
+          <p class="reveal">Pulsa cada forma para verla y descubrir para quién es ideal. Después, pruébala en el probador virtual.</p>
+          <div class="shape-buttons reveal" id="shapeButtons" role="radiogroup" aria-label="Formas de uña"></div>
+        </div>
+        <div class="shape-stage reveal" id="shapeStage">
+          <svg viewBox="-150 -40 300 380" id="shapeSvg" aria-hidden="true"></svg>
+          <div class="shape-info">
+            <h4 id="shapeName">Almendra</h4>
+            <p id="shapeDesc"></p>
+            <p class="shape-ideal"><svg class="i"><use href="#i-heart"/></svg> <span id="shapeIdeal"></span></p>
+            <input type="range" min="0" max="100" value="55" id="shapeLength" aria-label="Largo de la uña">
+            <div class="range-labels"><span>Corta</span><span>Larga</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diccionario de técnicas -->
+      <div class="container glossary" id="diccionario">
+        <div class="glossary-head">
+          <div>
+            <p class="eyebrow reveal">Diccionario Lúmina</p>
+            <h3 class="sub-title reveal-title">Todas las técnicas, <em class="gold-text">explicadas</em></h3>
+          </div>
+          <label class="search reveal">
+            <svg class="i"><use href="#i-search"/></svg>
+            <input type="search" id="glossarySearch" placeholder="Busca: cromado, BIAB, stiletto…" aria-label="Buscar técnica">
+            <span class="search-count" id="glossaryCount"></span>
+          </label>
+        </div>
+        <div class="glossary-grid" id="glossaryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= 02 · PRECIOS ================= -->
+    <section id="precios" class="section section-alt" data-section>
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">02 — Precios</p>
+          <h2 class="section-title reveal-title">Lujo accesible, <em class="gold-text">precio transparente</em></h2>
+          <p class="section-lead reveal">Productos premium veganos y libres de 10 tóxicos, material esterilizado en autoclave y la retirada gratis si repites con nosotras. Sin sorpresas.</p>
+        </header>
+
+        <div class="tabs center reveal" role="tablist" aria-label="Categorías de precios" id="priceTabs"></div>
+        <div class="price-board reveal" id="priceBoard"></div>
+        <p class="price-note reveal">Precios con IVA incluido · Club Lúmina: 10 % de descuento en todos los servicios.</p>
+      </div>
+
+      <!-- Calculadora de presupuesto -->
+      <div class="container calc" id="calculadora">
+        <div class="calc-form">
+          <p class="eyebrow reveal">Calculadora</p>
+          <h3 class="sub-title reveal-title">Diseña tu cita <em class="gold-text">y conoce el precio</em></h3>
+
+          <fieldset class="calc-step reveal">
+            <legend><span class="step-num">1</span> Elige el servicio base</legend>
+            <div class="option-grid" id="calcBase"></div>
+          </fieldset>
+
+          <fieldset class="calc-step reveal">
+            <legend><span class="step-num">2</span> Acabado especial</legend>
+            <div class="chip-grid" id="calcFinish"></div>
+          </fieldset>
+
+          <fieldset class="calc-step reveal">
+            <legend><span class="step-num">3</span> Diseño por uña</legend>
+            <div class="calc-art">
+              <div class="chip-grid" id="calcArtType"></div>
+              <div class="nail-counter">
+                <span>Uñas decoradas</span>
+                <div class="nail-dots" id="calcNailDots" role="group" aria-label="Número de uñas decoradas"></div>
+                <output id="calcNailCount">0</output>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="calc-step reveal">
+            <legend><span class="step-num">4</span> Extras y mimos</legend>
+            <div class="chip-grid" id="calcExtras"></div>
+            <label class="switch">
+              <input type="checkbox" id="calcClub">
+              <span class="switch-ui" aria-hidden="true"></span>
+              <span>Soy del Club Lúmina <small>(−10 %)</small></span>
+            </label>
+          </fieldset>
+        </div>
+
+        <aside class="ticket reveal" aria-live="polite">
+          <div class="ticket-head">
+            <span class="ticket-logo">Lúmina</span>
+            <span>Presupuesto nº <b id="ticketNum">0001</b></span>
+          </div>
+          <ul class="ticket-lines" id="ticketLines"></ul>
+          <div class="ticket-total">
+            <span>Total estimado</span>
+            <strong><span id="ticketTotal">0</span> €</strong>
+          </div>
+          <p class="ticket-time"><svg class="i"><use href="#i-clock"/></svg> Duración aproximada: <b id="ticketTime">0 min</b></p>
+          <button class="btn btn-gold btn-block magnetic" id="calcBook"><span>Reservar con este presupuesto</span><svg class="i"><use href="#i-arrow"/></svg></button>
+          <div class="ticket-cut" aria-hidden="true"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 03 · QUIÉNES SOMOS ================= -->
+    <section id="nosotros" class="section" data-section>
+      <div class="container about">
+        <div class="about-media">
+          <figure class="about-img-main reveal-img" data-speed="-0.06">
+            <img src="img/local/puesto.jpg" alt="Puesto de manicura de Lúmina: mesa negra escultórica, sillón blanco y lámpara de precisión" decoding="async" width="1258" height="1800">
+          </figure>
+          <figure class="about-img-small reveal-img" data-speed="0.08">
+            <img src="img/proceso/manicura.jpg" alt="Manicurista con guantes trabajando unas uñas rojas" decoding="async" width="1200" height="1800">
+          </figure>
+          <div class="about-badge reveal" data-speed="0.12">
+            <strong><span data-count="420">0</span> m²</strong>
+            <span>de atelier en el corazón de Salamanca</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow reveal">03 — Quiénes somos</p>
+          <h2 class="section-title reveal-title">Doce años elevando la manicura <em class="gold-text">a arte</em></h2>
+          <p class="reveal">Lúmina nació en 2014 en un pequeño estudio de 40&nbsp;m² con una idea muy clara: que hacerse las uñas fuera tan placentero como el resultado. Hoy somos un equipo de catorce artistas formadas en Seúl, Moscú, Tokio y Milán.</p>
+          <p class="reveal">Trabajamos sin prisas, con protocolos de higiene clínica y con productos que cuidan tu uña natural. Cada diseño empieza con una conversación y termina con una obra que se lleva puesta.</p>
+          <p class="signature reveal">Valeria Montes <span>Fundadora y directora artística</span></p>
+          <ul class="values">
+            <li class="reveal"><svg class="i"><use href="#i-shield"/></svg><div><b>Higiene clínica</b><span>Esterilización en autoclave clase B y limas de un solo uso.</span></div></li>
+            <li class="reveal"><svg class="i"><use href="#i-leaf"/></svg><div><b>Fórmulas limpias</b><span>Esmaltes veganos, cruelty-free y libres de 10 tóxicos.</span></div></li>
+            <li class="reveal"><svg class="i"><use href="#i-brush"/></svg><div><b>Arte de autor</b><span>Diseños exclusivos que no encontrarás en ningún catálogo.</span></div></li>
+            <li class="reveal"><svg class="i"><use href="#i-clock"/></svg><div><b>Tu tiempo importa</b><span>Puntualidad absoluta y citas sin solapamientos.</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Línea temporal -->
+      <div class="container timeline-wrap">
+        <h3 class="sub-title center reveal-title">Nuestra <em class="gold-text">historia</em></h3>
+        <ol class="timeline" id="timeline">
+          <li class="reveal"><span class="tl-year">2014</span><b>El primer estudio</b><p>Valeria abre un estudio de 40&nbsp;m² en la calle Jorge Juan.</p></li>
+          <li class="reveal"><span class="tl-year">2017</span><b>Llega la manicura rusa</b><p>Somos de los primeros salones de Madrid en dominar la técnica e-file.</p></li>
+          <li class="reveal"><span class="tl-year">2019</span><b>Premio Nail Art</b><p>Primer premio en el certamen nacional de nail art de autor.</p></li>
+          <li class="reveal"><span class="tl-year">2022</span><b>Lúmina Academy</b><p>Nace nuestra escuela para formar a las artistas del mañana.</p></li>
+          <li class="reveal"><span class="tl-year">2024</span><b>El gran atelier</b><p>Nos mudamos a 420&nbsp;m² en la calle Lagasca.</p></li>
+          <li class="reveal"><span class="tl-year">2026</span><b>Hoy</b><p>Más de 18.000 clientas y 120 técnicas distintas.</p></li>
+        </ol>
+        <div class="timeline-line" aria-hidden="true"><i id="timelineFill"></i></div>
+      </div>
+
+      <!-- Equipo -->
+      <div class="container team-wrap">
+        <header class="section-head center">
+          <p class="eyebrow reveal">El equipo</p>
+          <h3 class="sub-title reveal-title">Las manos <em class="gold-text">detrás de Lúmina</em></h3>
+        </header>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+
+      <div class="container certs reveal">
+        <span><svg class="i"><use href="#i-award"/></svg> Mejor atelier de uñas de Madrid 2025 · Guía Belleza Urbana</span>
+        <span><svg class="i"><use href="#i-shield"/></svg> Protocolo sanitario certificado</span>
+        <span><svg class="i"><use href="#i-leaf"/></svg> 100 % vegano y cruelty-free</span>
+        <span><svg class="i"><use href="#i-star"/></svg> 4,9 de valoración en más de 2.300 opiniones</span>
+      </div>
+    </section>
+
+    <!-- ================= 04 · GALERÍA DE TRABAJOS ================= -->
+    <section id="galeria" class="section section-alt" data-section>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">04 — Galería de trabajos</p>
+          <h2 class="section-title reveal-title">Obras que <em class="gold-text">se llevan puestas</em></h2>
+          <p class="section-lead reveal">Filtra por técnica, abre cada diseño a pantalla completa y, si te enamora, resérvalo con un clic.</p>
+        </header>
+        <div class="filters reveal" id="galleryFilters" role="toolbar" aria-label="Filtrar trabajos"></div>
+        <div class="gallery" id="gallery"></div>
+        <p class="gallery-empty" id="galleryEmpty" hidden>No hay trabajos con ese filtro… todavía.</p>
+      </div>
+    </section>
+
+    <!-- ================= 05 · EL ESTUDIO ================= -->
+    <section id="estudio" class="section estudio" data-section>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">05 — El estudio</p>
+          <h2 class="section-title reveal-title">420 m² donde el tiempo <em class="gold-text">se detiene</em></h2>
+          <p class="section-lead reveal">Mármol blanco, lacados en negro piano y luz de camerino. Un espacio diáfano y luminoso diseñado para que desde que cruzas la puerta pienses: <em>wow</em>.</p>
+        </header>
+        <ul class="studio-stats">
+          <li class="reveal"><strong data-count="420">0</strong><span>metros cuadrados</span></li>
+          <li class="reveal"><strong data-count="14">0</strong><span>puestos de manicura</span></li>
+          <li class="reveal"><strong data-count="3">0</strong><span>cabinas privadas</span></li>
+          <li class="reveal"><strong data-count="1200" data-format="miles">0</strong><span>tonos de esmalte</span></li>
+        </ul>
+      </div>
+
+      <div class="hscroll" id="hscroll">
+        <div class="hscroll-sticky">
+          <div class="hscroll-track" id="hscrollTrack"></div>
+          <div class="hscroll-ui container">
+            <span class="hscroll-hint">Desliza para recorrer el estudio</span>
+            <div class="hscroll-bar"><i id="hscrollBar"></i></div>
+            <span class="hscroll-count"><b id="hscrollNow">01</b> / <span id="hscrollTotal">10</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 · PROBADOR VIRTUAL ================= -->
+    <section id="probador" class="section section-alt" data-section>
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">06 — Probador virtual</p>
+          <h2 class="section-title reveal-title">Pruébate <em class="gold-text">cualquier color</em> antes de venir</h2>
+          <p class="section-lead reveal">Elige tono de piel, forma, largo, color y acabado. Cuando tengas tu look, guárdalo o resérvalo directamente.</p>
+        </header>
+
+        <div class="tryon">
+          <div class="tryon-stage reveal" id="tryonStage">
+            <svg viewBox="0 0 460 600" id="handSvg" role="img" aria-label="Vista previa de la mano con el esmalte elegido"></svg>
+            <div class="tryon-tag" id="tryonTag">
+              <span class="tag-swatch" id="tagSwatch"></span>
+              <div><b id="tagName">Rubí Lúmina</b><span id="tagMeta">Brillo · Almendra</span></div>
+              <strong id="tagPrice">42 €</strong>
+            </div>
+          </div>
+
+          <div class="tryon-panel reveal">
+            <div class="ctrl">
+              <span class="ctrl-label">Tono de piel</span>
+              <div class="skin-row" id="skinRow" role="radiogroup" aria-label="Tono de piel"></div>
+            </div>
+            <div class="ctrl">
+              <span class="ctrl-label">Forma</span>
+              <div class="pill-row" id="tryShape" role="radiogroup" aria-label="Forma de la uña"></div>
+            </div>
+            <div class="ctrl">
+              <label class="ctrl-label" for="tryLength">Largo <span id="tryLengthLabel">Medio</span></label>
+              <input type="range" id="tryLength" min="0" max="100" value="45">
+            </div>
+            <div class="ctrl">
+              <span class="ctrl-label">Colección</span>
+              <div class="pill-row small" id="tryCollections" role="tablist" aria-label="Colecciones de color"></div>
+              <div class="swatches" id="trySwatches" role="radiogroup" aria-label="Colores"></div>
+            </div>
+            <div class="ctrl">
+              <span class="ctrl-label">Acabado</span>
+              <div class="pill-row" id="tryFinish" role="radiogroup" aria-label="Acabado"></div>
+            </div>
+            <div class="ctrl ctrl-inline">
+              <label class="switch"><input type="checkbox" id="tryAccent"><span class="switch-ui" aria-hidden="true"></span><span>Uña de acento con glitter</span></label>
+              <label class="switch"><input type="checkbox" id="tryRing" checked><span class="switch-ui" aria-hidden="true"></span><span>Anillo</span></label>
+            </div>
+            <div class="tryon-actions">
+              <button class="btn btn-ghost btn-sm" id="tryRandom"><svg class="i"><use href="#i-shuffle"/></svg><span>Sorpréndeme</span></button>
+              <button class="btn btn-ghost btn-sm" id="trySave"><svg class="i"><use href="#i-heart"/></svg><span>Guardar look</span></button>
+              <button class="btn btn-gold btn-sm magnetic" id="tryBook"><span>Reservar este look</span><svg class="i"><use href="#i-arrow"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="saved-looks" id="savedLooks" hidden>
+          <h4>Tus looks guardados</h4>
+          <div class="saved-row" id="savedRow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 · QUIZ ================= -->
+    <section id="quiz" class="section quiz-section" data-section>
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">07 — Test de estilo</p>
+          <h2 class="section-title reveal-title">¿Cuál es tu <em class="gold-text">estilo de uñas</em> ideal?</h2>
+          <p class="section-lead reveal">Seis preguntas, un minuto y una recomendación hecha a tu medida por nuestras artistas.</p>
+        </header>
+        <div class="quiz-card reveal" id="quizCard"></div>
+      </div>
+    </section>
+
+    <!-- ================= OPINIONES ================= -->
+    <section id="opiniones" class="section section-alt testimonials" data-section>
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">Opiniones</p>
+          <h2 class="section-title reveal-title">Lo que dicen <em class="gold-text">sus manos</em></h2>
+        </header>
+        <div class="carousel reveal" id="carousel" aria-roledescription="carrusel">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <div class="carousel-nav">
+            <button class="icon-btn" id="carPrev" aria-label="Opinión anterior"><svg class="i"><use href="#i-left"/></svg></button>
+            <div class="carousel-dots" id="carDots"></div>
+            <button class="icon-btn" id="carNext" aria-label="Opinión siguiente"><svg class="i"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 · RESERVAS ================= -->
+    <section id="reservas" class="section" data-section>
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow reveal">08 — Reserva online</p>
+          <h2 class="section-title reveal-title">Tu cita, <em class="gold-text">en cuatro pasos</em></h2>
+          <p class="section-lead reveal">Elige servicio, artista, día y hora. Recibirás la confirmación al instante.</p>
+        </header>
+
+        <div class="booking reveal" id="booking">
+          <ol class="stepper" id="stepper">
+            <li class="is-active" data-step="1"><span>1</span>Servicio</li>
+            <li data-step="2"><span>2</span>Artista</li>
+            <li data-step="3"><span>3</span>Día y hora</li>
+            <li data-step="4"><span>4</span>Tus datos</li>
+          </ol>
+
+          <div class="booking-body">
+            <div class="booking-panes">
+              <!-- Paso 1 -->
+              <div class="pane is-active" data-pane="1">
+                <h3 class="pane-title">¿Qué te apetece hacerte?</h3>
+                <div class="pill-row small" id="bkCats" role="tablist" aria-label="Categorías"></div>
+                <div class="bk-services" id="bkServices"></div>
+              </div>
+              <!-- Paso 2 -->
+              <div class="pane" data-pane="2">
+                <h3 class="pane-title">¿Con quién quieres tu cita?</h3>
+                <div class="bk-artists" id="bkArtists"></div>
+              </div>
+              <!-- Paso 3 -->
+              <div class="pane" data-pane="3">
+                <h3 class="pane-title">Elige día y hora</h3>
+                <div class="bk-datetime">
+                  <div class="calendar" id="calendar">
+                    <div class="cal-head">
+                      <button class="icon-btn" id="calPrev" aria-label="Mes anterior"><svg class="i"><use href="#i-left"/></svg></button>
+                      <b id="calTitle">Mes</b>
+                      <button class="icon-btn" id="calNext" aria-label="Mes siguiente"><svg class="i"><use href="#i-right"/></svg></button>
+                    </div>
+                    <div class="cal-week"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+                    <div class="cal-grid" id="calGrid"></div>
+                    <p class="cal-legend"><i class="lg-free"></i> Disponible <i class="lg-few"></i> Pocas horas <i class="lg-closed"></i> Cerrado</p>
+                  </div>
+                  <div class="slots">
+                    <p class="slots-title" id="slotsTitle">Selecciona un día del calendario</p>
+                    <div class="slot-group" id="slotGroup"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Paso 4 -->
+              <div class="pane" data-pane="4">
+                <h3 class="pane-title">Ya casi está</h3>
+                <form class="bk-form" id="bkForm" novalidate>
+                  <div class="field"><input id="fName" name="nombre" required placeholder=" " autocomplete="name"><label for="fName">Nombre y apellidos</label><small class="err">Escribe tu nombre</small></div>
+                  <div class="field"><input id="fPhone" name="telefono" required placeholder=" " inputmode="tel" autocomplete="tel"><label for="fPhone">Teléfono</label><small class="err">Teléfono no válido (9 dígitos)</small></div>
+                  <div class="field"><input id="fEmail" name="email" type="email" required placeholder=" " autocomplete="email"><label for="fEmail">Email</label><small class="err">Email no válido</small></div>
+                  <div class="field field-wide"><textarea id="fNotes" name="notas" rows="3" placeholder=" "></textarea><label for="fNotes">Notas para tu artista (diseño, alergias…)</label></div>
+                  <label class="check field-wide"><input type="checkbox" id="fPrivacy" required><span>Acepto la política de privacidad y la cancelación gratuita hasta 24 h antes.</span></label>
+                </form>
+              </div>
+              <!-- Confirmación -->
+              <div class="pane pane-done" data-pane="5">
+                <div class="done-check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-15"/></svg></div>
+                <h3 class="pane-title">¡Cita confirmada!</h3>
+                <p>Te esperamos. Hemos enviado los detalles a <b id="doneEmail"></b>.</p>
+                <div class="done-code">Código de reserva <b id="doneCode">LUM-0000</b></div>
+                <div class="done-actions">
+                  <button class="btn btn-gold btn-sm" id="doneIcs"><svg class="i"><use href="#i-download"/></svg><span>Añadir al calendario</span></button>
+                  <button class="btn btn-ghost btn-sm" id="doneNew"><span>Hacer otra reserva</span></button>
+                </div>
+              </div>
+            </div>
+
+            <aside class="bk-summary" id="bkSummary">
+              <h4>Tu reserva</h4>
+              <ul id="bkSummaryList"><li class="muted">Aún no has elegido servicio</li></ul>
+              <dl>
+                <div><dt>Artista</dt><dd id="sumArtist">—</dd></div>
+                <div><dt>Fecha</dt><dd id="sumDate">—</dd></div>
+                <div><dt>Hora</dt><dd id="sumTime">—</dd></div>
+                <div><dt>Duración</dt><dd id="sumDur">—</dd></div>
+              </dl>
+              <div class="sum-total"><span>Total</span><strong id="sumTotal">0 €</strong></div>
+            </aside>
+          </div>
+
+          <div class="booking-nav">
+            <button class="btn btn-ghost btn-sm" id="bkBack" disabled><svg class="i"><use href="#i-left"/></svg><span>Atrás</span></button>
+            <p class="bk-hint" id="bkHint">Selecciona al menos un servicio</p>
+            <button class="btn btn-gold btn-sm" id="bkNext" disabled><span>Continuar</span><svg class="i"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+
+        <div class="my-bookings" id="myBookings" hidden>
+          <h4>Mis próximas citas</h4>
+          <ul id="myBookingsList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS FRECUENTES ================= -->
+    <section id="faq" class="section section-alt faq" data-section>
+      <div class="container faq-grid">
+        <header class="section-head">
+          <p class="eyebrow reveal">Preguntas frecuentes</p>
+          <h2 class="section-title reveal-title">Todo lo que <em class="gold-text">quieres saber</em></h2>
+          <p class="section-lead reveal">¿No encuentras tu respuesta? Escríbenos y una de nuestras artistas te contestará en menos de una hora.</p>
+        </header>
+        <div class="accordion" id="faqList">
+          <details class="reveal" open><summary>¿Cuánto dura un semipermanente?</summary><p>Entre dos y tres semanas perfecto. Con manicura rusa y rubber base solemos llegar a las cuatro semanas sin levantamientos.</p></details>
+          <details class="reveal"><summary>¿Qué diferencia hay entre BIAB, gel y acrílico?</summary><p>El BIAB refuerza tu uña natural sin alargarla demasiado. El gel esculpido permite extensiones ligeras y con mucho brillo. El acrílico es el más resistente y es ideal para largos extremos y formas arquitectónicas.</p></details>
+          <details class="reveal"><summary>¿La manicura rusa daña la uña?</summary><p>No, si la hace una profesional formada. Usamos fresas específicas para cada zona y trabajamos solo sobre la piel muerta de la cutícula, nunca sobre la uña.</p></details>
+          <details class="reveal"><summary>¿Cómo esterilizáis el material?</summary><p>Todo el instrumental metálico pasa por limpieza ultrasónica y autoclave clase B, y se abre en bolsa sellada delante de ti. Las limas y los pulidores son de un solo uso.</p></details>
+          <details class="reveal"><summary>¿Puedo cancelar o cambiar mi cita?</summary><p>Claro. La cancelación es gratuita hasta 24 horas antes. Desde la sección «Mis próximas citas» puedes anularla con un clic.</p></details>
+          <details class="reveal"><summary>¿Hacéis eventos y despedidas?</summary><p>Sí. Nuestra Lúmina Party reserva una cabina privada para grupos de 4 a 8 personas, con cava y música a vuestro gusto.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= CONTACTO / PIE ================= -->
+  <footer id="contacto" class="footer" data-section>
+    <div class="container footer-top">
+      <div class="footer-cta">
+        <h2 class="footer-title reveal-title">Tus manos merecen <em class="gold-text shimmer">brillar</em></h2>
+        <a href="#reservas" class="btn btn-gold magnetic"><span>Reservar mi cita</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="map-card reveal">
+        <svg class="map" viewBox="0 0 400 260" aria-hidden="true">
+          <rect width="400" height="260" fill="#14110F"/>
+          <g stroke="#2A241F" stroke-width="10" fill="none">
+            <path d="M-10 60 L410 40"/><path d="M-10 150 L410 135"/><path d="M-10 230 L410 220"/>
+            <path d="M70 -10 L90 270"/><path d="M190 -10 L200 270"/><path d="M310 -10 L325 270"/>
+          </g>
+          <g stroke="#221D19" stroke-width="5" fill="none"><path d="M-10 105 L410 88"/><path d="M130 -10 L145 270"/><path d="M255 -10 L262 270"/></g>
+          <path d="M20 250 C120 200 160 210 230 170 S350 120 395 30" stroke="#3B2F25" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+          <text x="209" y="170" fill="#6E6257" font-size="10" font-family="Manrope, sans-serif" transform="rotate(87 209 170)">C. DE LAGASCA</text>
+          <text x="236" y="129" fill="#6E6257" font-size="10" font-family="Manrope, sans-serif" transform="rotate(-2 236 129)">C. DE GOYA</text>
+          <text x="226" y="44" fill="#6E6257" font-size="10" font-family="Manrope, sans-serif" transform="rotate(-3 226 44)">C. DE JORGE JUAN</text>
+        </svg>
+        <div class="map-pin" aria-hidden="true"><span></span><svg class="i"><use href="#i-pin"/></svg></div>
+        <div class="map-info">
+          <b>Lúmina Nail Atelier</b>
+          <span>Calle de Lagasca 48 · 28001 Madrid</span>
+          <span>Metro Serrano · Velázquez</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="logo"><span class="logo-mark">L</span><span class="logo-text">Lúmina<small>Nail Atelier</small></span></a>
+        <p class="muted">Atelier de uñas, manicura y pedicura de autor en el Barrio de Salamanca.</p>
+        <div class="socials">
+          <a href="#contacto" aria-label="Instagram"><svg class="i"><use href="#i-insta"/></svg></a>
+          <a href="#contacto" aria-label="TikTok"><svg class="i"><use href="#i-tiktok"/></svg></a>
+          <a href="#contacto" aria-label="Pinterest"><svg class="i"><use href="#i-pinterest"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <ul class="hours">
+          <li><span>Lunes a viernes</span><span>10:00 – 21:00</span></li>
+          <li><span>Sábados</span><span>10:00 – 15:00</span></li>
+          <li><span>Domingos</span><span>Cerrado</span></li>
+        </ul>
+        <p class="open-now" id="openNow"></p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li><svg class="i"><use href="#i-pin"/></svg>Calle de Lagasca 48, Madrid</li>
+          <li><svg class="i"><use href="#i-phone"/></svg>91 000 00 00</li>
+          <li><svg class="i"><use href="#i-mail"/></svg>hola@luminanails.es</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p class="muted">Tendencias, nuevas colecciones y un 15 % en tu primera visita.</p>
+        <form class="newsletter" id="newsletter" novalidate>
+          <input type="email" placeholder="Tu email" aria-label="Tu email" required>
+          <button class="icon-btn gold" aria-label="Suscribirme"><svg class="i"><use href="#i-arrow"/></svg></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Lúmina Nail Atelier · Proyecto académico: negocio, nombre y precios ficticios.</p>
+      <p>Fotografías: <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> (licencia libre) e imágenes generadas con IA (Canva).</p>
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
+    <button class="icon-btn lb-close" id="lbClose" aria-label="Cerrar"><svg class="i"><use href="#i-close"/></svg></button>
+    <button class="icon-btn lb-prev" id="lbPrev" aria-label="Anterior"><svg class="i"><use href="#i-left"/></svg></button>
+    <figure class="lb-figure">
+      <div class="lb-img-wrap" id="lbImgWrap"><img id="lbImg" alt=""></div>
+      <figcaption class="lb-caption">
+        <span class="lb-count" id="lbCount"></span>
+        <h3 id="lbTitle"></h3>
+        <p id="lbMeta"></p>
+        <div class="lb-actions" id="lbActions"></div>
+      </figcaption>
+    </figure>
+    <button class="icon-btn lb-next" id="lbNext" aria-label="Siguiente"><svg class="i"><use href="#i-right"/></svg></button>
+  </div>
+
+  <div class="toast-zone" id="toastZone" aria-live="polite"></div>
+  <button class="to-top" id="toTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><circle cx="20" cy="20" r="18" id="toTopRing"/></svg>
+    <svg class="i"><use href="#i-up"/></svg>
+  </button>
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+  <!-- Scripts clásicos (sin módulos) para que la web funcione abriendo index.html con doble clic -->
+  <script src="js/data.js"></script>
+  <script src="js/nail.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/servicios.js"></script>
+  <script src="js/galeria.js"></script>
+  <script src="js/calculadora.js"></script>
+  <script src="js/probador.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/reservas.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
